@@ -7,39 +7,85 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.11/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/48f9c838f7.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
-    <header>
-        <nav class="w-11/12 mx-auto flex py-3 border-b justify-between items-center">
-            <div class="logo w-[100px]"><img src="Logo.png" alt=""></div>
-            <div class="search">
-                <label class="input input-bordered flex items-center gap-2">
-                    <input type="text" class="grow" placeholder="Search" />
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 16 16"
-                      fill="currentColor"
-                      class="h-4 w-4 opacity-70">
-                      <path
-                        fill-rule="evenodd"
-                        d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                        clip-rule="evenodd" />
-                    </svg>
-                  </label>
-            </div>
-            <div class="btn">sort</div>
-        </nav>
-    </header>
-    
+
+    <nav><div class="navbar bg-base-100">
+        <div class="navbar-start ml-5">
+          <img class="w-8 h-8 rounded-full " src="images/logo.webp" alt="">
+          <h1 class="text-xl font-bold ml-2">Peddy</h1>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li>
+                  <li><a>Shope</a></li>
+            </li>
+            <li><a>contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          
+        </div>
+      </div></nav>
+      <div class="flex justify-between ">
+        <button class="btn">Best Deal For You</button>
+        <button onclick="sortByPrice()" id="sort-price" class="btn">Sort by Price</button>
+      </div>
     <nav id="categoris" class="py-3 flex gap-5 justify-center items-center"></nav>
      
     <main>
-        <section id="videos" class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-10">
+      <div class=" hidden w-1/2 mx-auto" id="spinner">
+        <span class="loading loading-infinity loading-lg"></span>
+      </div>
+        <div class="w-11/12 mx-auto flex gap-2">
+          <section id="cards" class="w-2/3  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-10">
 
-        </section>
+          </section>
+          <section id="liked-pet" class="grid grid-rows-[repeat(auto-fill,_100px)] grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
+
+          </section>
+        </div>
+
+        <div>
+          <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Congrats!!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div id="cnt">3</div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button id="hid-close" class=""></button>
+      </form>
+    </div>
+  </div>
+</dialog>
+        </div>
+
+        <!-- Open the modal using ID.showModal() method -->
+
+  <div>
+    <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="detailsContent">
+          
+        </div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+  </div>
     </main>
 
-    <script src="video.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
