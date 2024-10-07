@@ -144,7 +144,7 @@ const displayCards = (data) => {
                         <p>Price: $${item.price?item.price:'not available'}</p>
                     </div>
                     <div class="card-buttons items-center justify-center mx-auto  ">
-                         <button onclick="likedImages(${item.petId})" class="btn"><i  class="fa-regular fa-heart "></i></button>
+                         <button onclick="likedImages(${item.petId})" class="btn p-1 lg:p-4"><i  class="fa-regular fa-heart "></i></button>
                         <button id="btn-${item.petId}" onclick="ShowAdopt(${item.petId})" class="btn">Adopt</button>
                         <button onclick="showDetails(${item.petId})" class="btn">Details</button>
                     </div><div/>

@@ -12,36 +12,56 @@
 </head>
 <body>
 
-    <nav><div class="navbar bg-base-100 justify-between">
+    <nav><div class="navbar bg-base-100 justify-between gap-2">
         <div class=" ml-5">
           <img class="w-8 h-8 rounded-full " src="images/logo.webp" alt="">
           <h1 class="text-xl font-bold ml-2">Peddy</h1>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
+            <li><a class="text-lg">Home</a></li>
             <li>
-                  <li><a>Shope</a></li>
+                  <li><a class="text-lg">Shope</a></li>
             </li>
-            <li><a>contact</a></li>
+            <li><a class="text-lg">contact</a></li>
           </ul>
         </div>
         <div class="border p-4 rounded-full">
           <i class="fa-regular fa-user"></i>
         </div>
       </div></nav>
-      <div class="flex justify-between ">
-        <button class="btn">Best Deal For You</button>
-        <button onclick="sortByPrice()" id="sort-price" class="btn">Sort by Price</button>
+     
+           
+      <div class="mx-auto w-11/12 flex justify-center items-center">
+        <div class="card bg-base-100 w-96 ">
+          <div class="card-body text-center justify-center items-center">
+            <p class="text-lg ">Bringing Families Together ❤️‍🔥</p>
+            <h2 class="card-title font-bold text-2xl lg:text-3xl"> 
+              Your Path to Adoption Starts Here</h2>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+            <button class="btn">View More</button>
+          </div>
+          <figure>
+            <img
+              src="images/pet.webp"
+              alt="Shoes" />
+          </figure>
+        </div>
       </div>
+
     <nav id="categoris" class="py-3 flex gap-5 justify-center items-center"></nav>
      
+    <div class="flex justify-between mx-auto w-11/12 ">
+      <button class="btn">Best Deal For You</button>
+      <button onclick="sortByPrice()" id="sort-price" class="btn">Sort by Price</button>
+    </div>
+
     <main>
       <div class=" hidden w-1/2 mx-auto" id="spinner">
         <span class="loading loading-infinity loading-lg"></span>
       </div>
         <div class="w-11/12 mx-auto flex gap-2">
-          <section id="cards" class="w-3/4  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-10">
+          <section id="cards" class="w-2/3  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-10">
 
           </section>
           <section id="liked-pet" class="grid grid-rows-[repeat(auto-fill,_100px)] grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
