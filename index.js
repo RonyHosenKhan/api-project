@@ -135,7 +135,7 @@ const displayCards = (data) => {
                 card.classList.add("card");
         
                 card.innerHTML = `
-                    <img src="${item.image}" alt="${item.category}">
+                   <div class="border p-1 shadow rounded-xl">  <img class="rounded-xl" src="${item.image}" alt="${item.category}">
                     <h3 class="font-bold text-xl">${item.breed?item.breed:'not available'}</h3>
                     <div class="card-info">
                         <p>Breed: ${item.category?item.category:"not found"}</p>
@@ -143,11 +143,11 @@ const displayCards = (data) => {
                         <p>Gender: ${item.gender?item.gender:'not found'}</p>
                         <p>Price: $${item.price?item.price:'not available'}</p>
                     </div>
-                    <div class="card-buttons items-center justify-center ">
+                    <div class="card-buttons items-center justify-center mx-auto  ">
                          <button onclick="likedImages(${item.petId})" class="btn"><i  class="fa-regular fa-heart "></i></button>
                         <button id="btn-${item.petId}" onclick="ShowAdopt(${item.petId})" class="btn">Adopt</button>
                         <button onclick="showDetails(${item.petId})" class="btn">Details</button>
-                    </div>
+                    </div><div/>
                 `;
         
                 cardContainer.appendChild(card);
